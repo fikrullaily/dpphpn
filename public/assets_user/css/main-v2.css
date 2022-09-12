@@ -1,0 +1,676 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../fonts/Poppins-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url(../fonts/Poppins-Bold.ttf) format("truetype"); }
+@font-face {
+  font-family: "Poppins-Extra-Bold";
+  src: url(../fonts/Poppins-ExtraBold.ttf) format("truetype"); }
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../fonts/Poppins-Light.ttf) format("truetype"); }
+.title-page {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px; }
+  .title-page .title {
+    font-size: 42px;
+    font-family: "Poppins-Bold";
+    color: #000;
+    position: relative;
+    text-align: center; }
+  .title-page .subtitle {
+    font-size: 16px;
+    font-family: "Poppins-Light";
+    color: #000;
+    text-align: center; }
+
+.section-title {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 30px; }
+  .section-title .title {
+    font-size: 32px;
+    font-family: "Poppins-Bold";
+    color: #000;
+    position: relative;
+    text-align: center; }
+  .section-title .subtitle {
+    font-size: 16px;
+    font-family: "Poppins-Light";
+    color: #000;
+    text-align: center; }
+
+.carousel .content-wp {
+  width: 100%;
+  display: flex;
+  height: 700px;
+  margin-top: -90px;
+  justify-content: center;
+  align-items: center; }
+  .carousel .content-wp img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    object-fit: cover; }
+  .carousel .content-wp .title-carousel {
+    font-family: "Poppins-Bold";
+    font-size: 56px;
+    color: #fff;
+    position: relative;
+    z-index: 9; }
+  .carousel .content-wp .subtitle-carousel {
+    font-family: "Poppins-Light";
+    font-size: 28px;
+    color: #fff;
+    position: relative;
+    z-index: 9; }
+
+.modal-request {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  top: -100px;
+  transition: all .32s; }
+  .modal-request.active {
+    opacity: 1;
+    visibility: visible;
+    top: 0px; }
+  .modal-request .form-request {
+    width: 350px;
+    height: 370px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; }
+    .modal-request .form-request .header {
+      width: 100%;
+      height: 70px;
+      font-size: 24px;
+      font-family: "Poppins-Bold";
+      background-color: #116d38;
+      text-align: center;
+      color: #fff; }
+    .modal-request .form-request .form-wp {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; }
+    .modal-request .form-request .select-wp {
+      width: 100%;
+      height: 48px;
+      padding: 5px;
+      border-radius: 8px;
+      border: 2px solid #000; }
+    .modal-request .form-request .btn-submit {
+      margin-top: 25px;
+      width: 100%;
+      height: 58px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-family: "Poppins-Regular";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #116d38;
+      transition: all .32s;
+      color: #fff;
+      cursor: pointer;
+      border: none; }
+      .modal-request .form-request .btn-submit:hover {
+        background-color: #0e572d; }
+    .modal-request .form-request .label {
+      font-size: 18px;
+      font-family: "Poppins-Regular";
+      margin-bottom: 5px; }
+    .modal-request .form-request .input {
+      width: 100%;
+      height: 48px;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 10px; }
+  .modal-request .close-button {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+    top: -240;
+    left: 50px;
+    transition: all 0.32s;
+    top: -170px;
+    left: 20px; }
+    .modal-request .close-button span.close {
+      width: 40px;
+      height: 5px;
+      border-radius: 30px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%; }
+      .modal-request .close-button span.close:nth-child(1) {
+        transform: rotate(45deg); }
+      .modal-request .close-button span.close:nth-child(2) {
+        transform: rotate(-45deg); }
+    .modal-request .close-button:hover span.close {
+      background-color: #116d38; }
+  .modal-request::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1; }
+
+#home-page .accent-1 {
+  position: absolute;
+  height: 600px;
+  right: -310px;
+  top: 100px;
+  opacity: 0.1; }
+#home-page .title-header {
+  font-size: 52px;
+  font-family: "Poppins-Bold";
+  line-height: 70px;
+  color: #116d38;
+  width: 80%; }
+#home-page .gallery-header {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-top: 25px; }
+  #home-page .gallery-header .image-wrapper {
+    width: calc(20% - 10px);
+    padding-right: 10px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; }
+    #home-page .gallery-header .image-wrapper .image {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 16px; }
+      #home-page .gallery-header .image-wrapper .image img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .32s;
+        object-fit: cover;
+        vertical-align: middle; }
+        #home-page .gallery-header .image-wrapper .image img:hover {
+          transform: scale(1.2); }
+      #home-page .gallery-header .image-wrapper .image.img-1 {
+        height: 280px; }
+      #home-page .gallery-header .image-wrapper .image.img-2 {
+        height: 150px; }
+      #home-page .gallery-header .image-wrapper .image.img-3 {
+        margin-top: 20px;
+        height: 300px; }
+      #home-page .gallery-header .image-wrapper .image.img-4 {
+        height: 470px; }
+      #home-page .gallery-header .image-wrapper .image.img-5 {
+        height: 300px; }
+      #home-page .gallery-header .image-wrapper .image.img-6 {
+        margin-top: 20px;
+        height: 150px; }
+      #home-page .gallery-header .image-wrapper .image.img-7 {
+        height: 280px; }
+
+#main-wrapper {
+  margin-top: 0px;
+  padding: 32px 0; }
+
+#news-page .tab {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins-Regular";
+  cursor: pointer; }
+  #news-page .tab.active {
+    background-color: #116d38;
+    color: #fff;
+    box-shadow: none; }
+#news-page .news-content {
+  margin-top: 50px; }
+
+#detail-news .blog .blog-details .post-img img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover; }
+
+#struktur-organisasi .wp-image {
+  width: 100%;
+  position: relative; }
+  #struktur-organisasi .wp-image img {
+    width: 100%;
+    height: auto; }
+
+#program-kerja .visi-misi {
+  padding-top: 125px; }
+  #program-kerja .visi-misi .image-left {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    position: relative; }
+    #program-kerja .visi-misi .image-left .image {
+      position: absolute;
+      object-fit: cover;
+      border-radius: 8px;
+      z-index: 3;
+      transition: all .32s;
+      overflow: hidden;
+      width: 48%;
+      cursor: pointer; }
+      #program-kerja .visi-misi .image-left .image:hover {
+        transform: scale(1.05); }
+      #program-kerja .visi-misi .image-left .image.img-1 {
+        height: 100%;
+        left: 0; }
+      #program-kerja .visi-misi .image-left .image.img-2 {
+        height: 48%;
+        right: 0;
+        top: 0; }
+      #program-kerja .visi-misi .image-left .image.img-3 {
+        height: 48%;
+        right: 0;
+        bottom: 0; }
+  #program-kerja .visi-misi .image-right {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    position: relative; }
+    #program-kerja .visi-misi .image-right .image {
+      position: absolute;
+      object-fit: cover;
+      border-radius: 8px;
+      z-index: 3;
+      transition: all .32s;
+      overflow: hidden;
+      cursor: pointer; }
+      #program-kerja .visi-misi .image-right .image:hover {
+        transform: scale(1.05); }
+      #program-kerja .visi-misi .image-right .image.img-1 {
+        height: 48%;
+        width: 48%;
+        left: 0;
+        top: 0; }
+      #program-kerja .visi-misi .image-right .image.img-2 {
+        height: 48%;
+        width: 48%;
+        right: 0;
+        top: 0; }
+      #program-kerja .visi-misi .image-right .image.img-3 {
+        height: 48%;
+        width: 100%;
+        left: 0;
+        bottom: 0; }
+  #program-kerja .visi-misi .title-section {
+    font-family: "Poppins-Bold";
+    font-size: 42px;
+    color: #000; }
+  #program-kerja .visi-misi .content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: "Poppins-Regular";
+    line-height: 32px; }
+    #program-kerja .visi-misi .content ol li {
+      margin-top: 8px; }
+  #program-kerja .visi-misi .misi {
+    margin-top: 120px; }
+  #program-kerja .visi-misi .ad-art {
+    width: 100%;
+    padding: 64px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(17, 109, 56, 0.5);
+    border-radius: 16px;
+    margin-top: 50px;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 75px; }
+    #program-kerja .visi-misi .ad-art .btn-download {
+      width: 250px;
+      height: 64px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: "Poppins-Bold";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #116d38;
+      transition: all .32s;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+      margin-left: auto; }
+      #program-kerja .visi-misi .ad-art .btn-download:hover {
+        background-color: #0e572d; }
+  #program-kerja .visi-misi .agenda-organisasi .section-agenda {
+    align-items: center;
+    justify-content: center; }
+  #program-kerja .visi-misi .agenda-organisasi .card-agenda {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px; }
+    #program-kerja .visi-misi .agenda-organisasi .card-agenda .image {
+      width: 100%;
+      height: 350px;
+      position: relative;
+      transition: all .32s;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer; }
+      #program-kerja .visi-misi .agenda-organisasi .card-agenda .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute; }
+        #program-kerja .visi-misi .agenda-organisasi .card-agenda .image img:hover {
+          transform: scale(1.2); }
+    #program-kerja .visi-misi .agenda-organisasi .card-agenda .content-profile {
+      margin-top: 20px; }
+      #program-kerja .visi-misi .agenda-organisasi .card-agenda .content-profile .title {
+        font-family: "Poppins-Bold";
+        font-size: 20px;
+        line-height: 32px;
+        color: #000; }
+      #program-kerja .visi-misi .agenda-organisasi .card-agenda .content-profile .subtitle {
+        font-family: "Poppins-Regular";
+        font-size: 16px;
+        line-height: 32px;
+        color: rgba(0, 0, 0, 0.5); }
+
+#profile {
+  margin-top: 14px; }
+  #profile .section-ketua {
+    width: 32%;
+    margin: 0 auto;
+    position: relative; }
+  #profile .section-anggota {
+    align-items: center;
+    justify-content: center; }
+  #profile .card-wp {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px; }
+    #profile .card-wp .image {
+      width: 100%;
+      height: 350px;
+      position: relative;
+      transition: all .32s;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer; }
+      #profile .card-wp .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute; }
+        #profile .card-wp .image img:hover {
+          transform: scale(1.2); }
+    #profile .card-wp .content-profile {
+      text-align: center;
+      margin-top: 20px; }
+      #profile .card-wp .content-profile .title {
+        font-family: "Poppins-Bold";
+        font-size: 20px;
+        line-height: 32px;
+        color: #000; }
+      #profile .card-wp .content-profile .subtitle {
+        font-family: "Poppins-Regular";
+        font-size: 20px;
+        line-height: 32px;
+        color: rgba(0, 0, 0, 0.5); }
+
+#daftar-dpw {
+  margin-top: 14px; }
+  #daftar-dpw .section-dpw {
+    align-items: center;
+    justify-content: center; }
+  #daftar-dpw .card-dpw {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 100px; }
+    #daftar-dpw .card-dpw .image {
+      width: 100%;
+      height: 350px;
+      position: relative;
+      transition: all .32s;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer; }
+      #daftar-dpw .card-dpw .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute; }
+        #daftar-dpw .card-dpw .image img:hover {
+          transform: scale(1.2); }
+    #daftar-dpw .card-dpw .content-profile {
+      margin-top: 20px; }
+      #daftar-dpw .card-dpw .content-profile .title {
+        font-family: "Poppins-Bold";
+        font-size: 20px;
+        line-height: 32px;
+        color: #000; }
+      #daftar-dpw .card-dpw .content-profile .subtitle {
+        font-family: "Poppins-Regular";
+        font-size: 20px;
+        line-height: 32px;
+        color: rgba(0, 0, 0, 0.5); }
+  #daftar-dpw .modal-dpw-dpc {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    top: -100px;
+    transition: all .32s; }
+    #daftar-dpw .modal-dpw-dpc.active {
+      opacity: 1;
+      visibility: visible;
+      top: 0px; }
+    #daftar-dpw .modal-dpw-dpc .section-content {
+      width: 80%; }
+      #daftar-dpw .modal-dpw-dpc .section-content .card-dpw {
+        margin-top: 0; }
+        #daftar-dpw .modal-dpw-dpc .section-content .card-dpw .content-profile {
+          text-align: center; }
+          #daftar-dpw .modal-dpw-dpc .section-content .card-dpw .content-profile .title {
+            color: #fff; }
+          #daftar-dpw .modal-dpw-dpc .section-content .card-dpw .content-profile .subtitle {
+            color: rgba(255, 255, 255, 0.5); }
+    #daftar-dpw .modal-dpw-dpc .close-button {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      cursor: pointer;
+      left: 50px;
+      transition: all 0.32s;
+      top: -210px;
+      left: 20px; }
+      #daftar-dpw .modal-dpw-dpc .close-button span.close {
+        width: 40px;
+        height: 5px;
+        border-radius: 30px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%; }
+        #daftar-dpw .modal-dpw-dpc .close-button span.close:nth-child(1) {
+          transform: rotate(45deg); }
+        #daftar-dpw .modal-dpw-dpc .close-button span.close:nth-child(2) {
+          transform: rotate(-45deg); }
+      #daftar-dpw .modal-dpw-dpc .close-button:hover span.close {
+        background-color: #116d38; }
+    #daftar-dpw .modal-dpw-dpc::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: -1; }
+
+#catalog-page .filter-tab {
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-family: "Poppins-Regular"; }
+  #catalog-page .filter-tab.active {
+    color: #fff;
+    background-color: #116d38; }
+#catalog-page .catalog-wp {
+  padding: 12px; }
+  #catalog-page .catalog-wp .img-wp {
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer; }
+    #catalog-page .catalog-wp .img-wp .description {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      z-index: 3;
+      transition: all ease-in-out 0.3s;
+      padding: 20px;
+      color: #fff;
+      font-size: 14px;
+      font-family: "Poppins-Light"; }
+      #catalog-page .catalog-wp .img-wp .description .title {
+        margin-bottom: 8px;
+        font-family: "Poppins-Bold";
+        font-size: 18px; }
+    #catalog-page .catalog-wp .img-wp::after {
+      content: "";
+      inset: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      transition: 0.5s;
+      visibility: hidden;
+      opacity: 0; }
+    #catalog-page .catalog-wp .img-wp:hover::after {
+      opacity: 1;
+      visibility: visible; }
+    #catalog-page .catalog-wp .img-wp:hover .description {
+      opacity: 1;
+      visibility: visible;
+      top: 0; }
+  #catalog-page .catalog-wp .catalog-content {
+    padding: 12px 8px; }
+    #catalog-page .catalog-wp .catalog-content .title-catalog {
+      font-family: "Poppins-Bold";
+      font-size: 20px; }
+    #catalog-page .catalog-wp .catalog-content .price {
+      font-family: "Poppins-Light";
+      font-size: 16px; }
+    #catalog-page .catalog-wp .catalog-content .link-wp {
+      display: flex;
+      justify-content: flex-end; }
+      #catalog-page .catalog-wp .catalog-content .link-wp .gallery-catalog {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #116d38;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        transition: all .32s; }
+        #catalog-page .catalog-wp .catalog-content .link-wp .gallery-catalog a i {
+          color: #fff; }
+        #catalog-page .catalog-wp .catalog-content .link-wp .gallery-catalog:hover {
+          background-color: #0e572d; }
+      #catalog-page .catalog-wp .catalog-content .link-wp .detail-link {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #116d38;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        margin-left: 8px;
+        transition: all .32s; }
+        #catalog-page .catalog-wp .catalog-content .link-wp .detail-link a i {
+          color: #fff; }
+        #catalog-page .catalog-wp .catalog-content .link-wp .detail-link:hover {
+          background-color: #0e572d; }
+
+#footer .logo-footer {
+  height: 100px; }
+#footer .footer-menu {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Poppins-Regular";
+  font-size: 14px;
+  padding: 10px 12px; }
+  #footer .footer-menu a {
+    color: #fff; }
+#footer .accordion {
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s; }
+#footer .sub-menu {
+  padding: 6px 15px;
+  position: relative; }
+  #footer .sub-menu a {
+    color: #fff; }
+  #footer .sub-menu::before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 43%;
+    width: 6px;
+    height: 6px; }
+#footer .panel {
+  color: #fff;
+  padding: 0 10px;
+  display: none;
+  overflow: hidden; }
+
+/*# sourceMappingURL=main-v2.css.map */
